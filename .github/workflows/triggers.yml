@@ -5,6 +5,7 @@ on:
     pull_request:
         types: [opened, synchronize]
         paths: ['**.js']
+    push:
     workflow_dispatch:
         inputs:
             favourite_language:

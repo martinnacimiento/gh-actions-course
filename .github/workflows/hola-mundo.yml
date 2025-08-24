@@ -1,0 +1,13 @@
+name: "Hola Mundo"
+
+on: [push]
+
+jobs:
+    print-hello-world:
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5.0.0
+            - name: Run js code
+              run: node index.js
+            

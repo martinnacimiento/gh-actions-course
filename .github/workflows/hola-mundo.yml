@@ -8,6 +8,12 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v5.0.0
+            - name: 🚀 Setup NodeJS
+              uses: actions/setup-node@v4
+              with:
+                node-version: '22'
             - name: Run js code
-              run: node index.js
+              run: |
+                node --version
+                node index.js
             

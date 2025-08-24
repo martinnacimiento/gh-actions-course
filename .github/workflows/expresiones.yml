@@ -1,0 +1,41 @@
+name: 😑 Expressions
+run-name: Expressions
+
+on:
+    workflow_dispatch:
+        inputs:
+            language:
+                description: pls, language
+                required: false
+                type: choice
+                options: [Go, Js, Py]
+
+jobs:
+    go-team:
+        if: ${{ inputs.language == 'Go' }}
+        name: 🔵 Go Team Club
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Welcome to the Go team club
+              run: echo "Welcome to the Go team club 🚀"
+    js-team:
+        if: ${{ inputs.language == 'Js' }}
+        name: 🟡 Js Team Club
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Welcome to the Js team club
+              run: echo "Welcome to the JS team club 🚀"
+    py-team:
+        if: ${{ inputs.language == 'Py' }}
+        name: 🟢 Py Team Club
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Welcome to the Py team club
+              run: echo "Welcome to the Py team club 🚀"
+    null-team:
+        if: ${{ inputs.language == null }}
+        name: ⚫ Null Team Club
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Welcome to the Null team club
+              run: echo "Welcome to the Null team club 🚀"

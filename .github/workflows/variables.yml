@@ -19,4 +19,4 @@ jobs:
                 echo "W_ENV= $W_ENV"
                 echo "J_ENV= $J_ENV"
                 echo "S_ENV= $S_ENV"
-                echo "REPO_ENV= $REPO_ENV"
+                echo "REPO_ENV= ${{ vars.REPO_ENV }}"

@@ -7,6 +7,18 @@ on:
         paths: ['**.js']
     push:
     workflow_dispatch:
+        inputs:
+            favourite-language:
+                description: "What's you favourite language?"
+                default: Go
+                required: true
+                type: choice
+                options: [Go, Js, Py]
+            name:
+                description: "What's your name?"
+                required: true
+                type: string
+
 
 jobs:
     job-1:

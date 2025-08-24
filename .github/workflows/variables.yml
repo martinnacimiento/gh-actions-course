@@ -1,0 +1,22 @@
+name: 🔍 Variables
+run-name: Variables
+
+on: [workflow_dispatch]
+
+env:
+    W_ENV: From workflow env
+jobs:
+    get-context:
+        name: 🫣 Show Variables
+        runs-on: ubuntu-22.04
+        env:
+            J_ENV: From job env
+        steps:
+            - name: Showing
+              env:
+                S_ENV: From step env
+              run: | 
+                echo "W_ENV= $W_ENV"
+                echo "J_ENV= $J_ENV"
+                echo "S_ENV= $S_ENV"
+                echo "REPO_ENV= $REPO_ENV"

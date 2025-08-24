@@ -1,7 +1,10 @@
 name: ✨ Triggers workflow
+run-name: Trigger workflow
 
 on:
     pull_request:
+        types: [opened, synchronize]
+        paths: ['**.js']
     push:
     workflow_dispatch:
 

@@ -1,0 +1,13 @@
+name: ✨ Triggers workflow
+
+on:
+    pull_request:
+    push:
+    workflow_dispatch:
+
+jobs:
+    job-1:
+        runs-on: ubuntu-22.4
+        steps:
+            - name: 🧉 Echo and Mates (${{github.event_name}})
+              run: echo "Mateando"

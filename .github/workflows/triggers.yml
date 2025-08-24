@@ -8,7 +8,7 @@ on:
     push:
     workflow_dispatch:
         inputs:
-            favourite-language:
+            favourite_language:
                 description: "What's you favourite language?"
                 default: Go
                 required: true
